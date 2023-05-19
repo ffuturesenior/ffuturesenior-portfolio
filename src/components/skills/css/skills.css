@@ -41,11 +41,11 @@
 .skills_middle_block_1{
     min-width:310px;
     flex: 0 0 50%;
-    padding: 0px 4px 0px 0px;
+    padding: 0px 4px 0px 4px;
 }
 
 .skills_middle_block_2{
     min-width:310px;
     flex: 0 0 50%;
-    padding: 0px 0px 0px 4px;
+    padding: 0px 4px 0px 4px;
 }

@@ -28,7 +28,7 @@ export const Form=()=>{
 
     const  submit= async(event:React.FormEvent<HTMLFormElement>)=>{
         event?.preventDefault()
-        const url='http://localhost:5050'
+        const url='https://ffuturesenior-portfolio-mailer.onrender.com'
         try{
             const res=await axios.post(`${url}/sendmail`,{
                 from:message.email,
@@ -67,7 +67,7 @@ export const Form=()=>{
                 <input onChange={e=>subjectInputHandler(e.target.value)} type="text" className="form-control" id="validationDefaultUsername" value={message.subject} aria-describedby="inputGroupPrepend2" required/> 
             </div>
             <div className="">
-                <label htmlFor="validationDefault03" className="form-label">mesage</label>
+                <label htmlFor="validationDefault03" className="form-label">message</label>
                 <textarea onChange={e=>messageInputHandler(e.target.value)} className="form-control" value={message.message} id="validationDefault03" required/>
             </div> 
             <div className="text-center">

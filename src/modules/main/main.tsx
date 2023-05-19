@@ -9,7 +9,7 @@ export const Main=()=>{
 
     return(
         <div id="main" style={{padding:'0px'}}>
-        <button style={{position:'absolute',margin:'10px',borderRadius:'10px'}} className="openbtn" onClick={openNav}>Open Sidebar</button>
+        <button style={{position:'absolute',margin:'10px',borderRadius:'10px',zIndex:'999'}} className="openbtn" onClick={openNav}>Open Sidebar</button>
         <div className="col-8">
           <div data-bs-spy="scroll" style={{height:'100vh',width:'100vw',overflowX:'hidden',overflowY:'scroll'}} data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" className="scrollspy-example-2" tabIndex={0}>
                 <div className="parallax">
@@ -29,10 +29,10 @@ export const Main=()=>{
                         </div>
                     </div>
                 </div>  
-                <div style={{height:'100vh',overflow:'hidden'}}id="item-2">
+                <div style={{overflow:'hidden'}}id="item-2">
                     <About/>
                 </div>
-                <div style={{height:'100vh'}}id="item-3">
+                <div style={{height:'110vh'}}id="item-3">
                     <Skills/>
                 </div>
                 <div id="item-4">
