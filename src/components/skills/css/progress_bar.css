@@ -1,0 +1,24 @@
+.progress-description{
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress-description p{
+    margin: 0px 0px 5px;
+}
+
+.progress-bar {
+    display: flex;
+   
+    height: 20px;
+    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    overflow: hidden;
+}
+  
+.progress-line {
+    height: 100%;
+    background-color: blue;
+    transition: width 0.5s ease-in-out;
+  }

@@ -1,0 +1,145 @@
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.projects_container{
+    padding: 60px;
+    margin: 0px auto;
+    max-width: 1200px;
+}
+
+.project_header{
+    max-width: 877px;
+}
+
+
+.project_header h1{
+    font-size: 32px;
+    font-weight: 800;
+    color:blue;
+    display: inline-block;
+    padding-bottom: 20px;
+    border-bottom: 2px solid blue;
+    margin-bottom:20px;
+}
+
+
+.project_header span{
+    font-size: 16px;
+    color:gray;
+    display: inline-block;
+    padding-bottom: 20px;
+    margin-bottom:20px;
+}
+
+
+.project_header_nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto;
+    max-width: 400px;
+    padding: 9px;
+    background-color: darkgray;
+    border-radius: 17px;
+}
+
+
+.project_header_nav_item{
+    cursor: pointer;
+    margin: 0px;
+    font-style:sans-serif;
+    font-size: medium;
+    font-weight: 500;
+    font-weight: 300px;
+}
+
+.active{
+    margin: 0px;
+    font-style:sans-serif;
+    font-weight: 500px;
+    color: blue;
+}
+
+.project_list{
+    display: grid;
+    max-width: 100%;
+    margin-top: 15px;
+    grid-template-columns: repeat(auto-fill, 330px);
+    grid-template-rows: repeat(auto-fill, 330px);
+    grid-gap: 15px;
+    
+}
+
+
+
+.project_list_item:hover{
+    filter: brightness(50%);
+}
+
+.project_list_item {
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+    filter: brightness(100%);
+    transition: filter 0.5s ease-in-out;
+}
+
+.project_list_item_link {
+  position: absolute;
+  text-align: center;
+  top: 110%;
+  left: 50%;
+  z-index: 1;
+  display: inline-block;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  background-color: blue;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.project_list_item_link p{
+    color: #fff;
+    font-weight: 500;
+    margin: 0px;
+}
+
+.project_list_item:hover .project_list_item_link {
+  opacity: 1;
+  visibility: visible;
+  top: 93%;
+}
+
+.project_list_item_name {
+  position: absolute;
+  text-align: center;
+  top: -40%;
+  left: 50%;
+  z-index: 1;
+  display: inline-block;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  background-color: blue;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+    font-weight: 500;
+    margin: 0px;
+}
+
+
+
+.project_list_item:hover .project_list_item_name {
+  opacity: 1;
+  visibility: visible;
+  top: 6%;
+}
