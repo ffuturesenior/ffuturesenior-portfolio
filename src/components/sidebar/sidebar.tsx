@@ -1,4 +1,4 @@
-import react from 'react'
+import react ,{FC}from 'react'
 import { closeNav } from '../../helpers/sidebar'
 import TelegramIcon from '@mui/icons-material/Telegram';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -6,13 +6,23 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 import './css/sidebar.css'
 
-export const Sidebar=()=>{
+interface props{
+    setIsNavOpen:(bool:boolean)=>void
+}
+
+export const Sidebar:FC<props>=({setIsNavOpen})=>{
+
+    const closeNavHandler=()=>{
+        closeNav()
+        setIsNavOpen(false)
+    }
+
     return(
         <>
         <div id="mySidebar" className="sidebar">
-            <a href="javascript:void(0)"  className="closebtn" onClick={closeNav}>&times;</a>
+            <a href="javascript:void(0)"  className="closebtn" onClick={closeNavHandler}>&times;</a>
             <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
-                <img src="https://cs.pikabu.ru/post_img/2013/05/06/5/1367817074_1793772305.jpg" className="rounded-circle" style={{width:"150px"}}alt="Avatar" />
+                <img src={require('../../static/usy.jpg')} className="rounded-circle" style={{width:"150px"}}alt="Avatar" />
                 <h2 style={{color:'white'}}>Shamray Ruslan</h2>
                 <div>
                     <TelegramIcon style={{margin:"0px 10px 0px 0px"}}/>
