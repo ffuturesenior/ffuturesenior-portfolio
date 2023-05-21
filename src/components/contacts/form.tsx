@@ -57,7 +57,7 @@ export const Form=()=>{
 
     return(
         <>
-        <form onSubmit={(e)=>submit(e)}  style={{maxWidth:'400px',padding:'10px'}}>
+        <form onSubmit={(e)=>submit(e)} className='form_block'>
             <div className="row ">
                 <div className="col-md-6" style={{}}>
                     <label htmlFor="validationDefault01" className="form-label">Your name</label>
@@ -83,6 +83,7 @@ export const Form=()=>{
         </form>
         <style>
             {`
+               
                 body{
                     
                 }
