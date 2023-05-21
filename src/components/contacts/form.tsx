@@ -12,7 +12,8 @@ export const Form=()=>{
         subject:'',
         message:''
     })
-
+    const [isLoading,setIsLoading]=useState(false)
+    const [buttonText,setButtonText]=useState('Submit form')
     const nameInputHandler=(text:string)=>{
         setMessage({...message,name:text})
     }
@@ -30,27 +31,33 @@ export const Form=()=>{
         event?.preventDefault()
         const url='https://ffuturesenior-portfolio-mailer.onrender.com'
         try{
+            setIsLoading(true)
+            setButtonText('Loading')
             const res=await axios.post(`${url}/sendmail`,{
                 from:message.email,
                 subject:message.subject,
                 text:message.message ,
                 to:'shamray.ruslan068@gmail.com'
             })
-            alert('sent')
         }catch(e){
             console.error(e)
+        }finally{
+            setMessage({
+                name:'',
+                email:'',
+                subject:'',
+                message:''
+            })
+            setIsLoading(false)
+            setButtonText('Submit form')
         }
-        setMessage({
-            name:'',
-            email:'',
-            subject:'',
-            message:''
-        })
+        
     }
 
 
     return(
-        <form onSubmit={(e)=>submit(e)}  style={{maxWidth:'400px',padding:'20px'}}>
+        <>
+        <form onSubmit={(e)=>submit(e)}  style={{maxWidth:'400px',padding:'10px'}}>
             <div className="row ">
                 <div className="col-md-6" style={{}}>
                     <label htmlFor="validationDefault01" className="form-label">Your name</label>
@@ -71,8 +78,17 @@ export const Form=()=>{
                 <textarea onChange={e=>messageInputHandler(e.target.value)} className="form-control" value={message.message} id="validationDefault03" required/>
             </div> 
             <div className="text-center">
-                <button className="btn btn-primary" type="submit">Submit form</button>
+                <button className={`btn btn-${isLoading?`warning`:`primary`}`} type="submit">{buttonText}</button>
             </div>
         </form>
+        <style>
+            {`
+                body{
+                    
+                }
+            `}
+        </style>
+        </>
+        
     )
 }
