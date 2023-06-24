@@ -1,3 +1,18 @@
+@media (max-width: 556px) {
+    .skills_container{
+        padding: 10px;
+        margin: 0px auto;
+    }
+}
+
+@media  (min-width:930px){
+    .skills_container{
+        padding: 10px;
+        margin: 0px auto;
+    }
+}
+
+
 
 .center{
     display: flex;
@@ -7,7 +22,6 @@
 
 
 .skills_container{
-    padding: 60px;
     margin: 0px auto;
 }
 .skills_header{

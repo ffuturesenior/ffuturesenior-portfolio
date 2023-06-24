@@ -1,3 +1,22 @@
+@media (max-width: 556px) {
+    .projects_container{
+        padding:10px;
+        margin: 0px auto;
+        max-width: 1200px;
+    }
+}
+
+
+
+
+@media  (min-width:930px){
+    .projects_container{
+        padding: 60px;
+        margin: 0px auto;
+        max-width: 1200px;
+    }
+}
+
 .center{
     display: flex;
     flex-direction: column;
@@ -6,7 +25,6 @@
 
 
 .projects_container{
-    padding: 60px;
     margin: 0px auto;
     max-width: 1200px;
 }

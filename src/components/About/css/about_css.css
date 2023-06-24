@@ -1,3 +1,17 @@
+@media (max-width: 556px) {
+    .about_container{
+        padding: 10px;
+        margin: 0px auto;
+    }
+}
+
+@media  (min-width:930px){
+    .about_container{
+        padding: 10px;
+        margin: 0px auto;
+    }
+}
+
 
 .center{
     display: flex;
@@ -9,7 +23,6 @@
   }
 
 .about_container{
-    padding: 60px;
     margin: 0px auto;
 }
 
